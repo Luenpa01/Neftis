@@ -6,11 +6,11 @@ struct Aircraft {
 }
 
 impl Aircraft {
-    fn new(username: String, email: String, uri: String) -> Self {
+    fn new(model: String, engine: String, class: String) -> Self {
         Self {
-            model: username,
-            engine: email,
-            class: uri,
+            model: model,
+            engine: engine,
+            class: class,
             bombs: true,
         }
     }
@@ -25,8 +25,8 @@ fn main() {
         String::from("Merlin"),
         String::from("Racer"),
     );
-    println!("Hello, {}!", new_aircraft.model);
-    println!("Account {} status is: {}", new_aircraft.model, new_aircraft.bombs);
+    println!("Aircraft name: {}", new_aircraft.model);
+    println!("{} armed status is: {}", new_aircraft.model, new_aircraft.bombs);
     new_aircraft.deactivate();
-    println!("Account {} status is: {}", new_aircraft.model, new_aircraft.bombs);
+    println!("{} armed status is: {}", new_aircraft.model, new_aircraft.bombs);
 }
